@@ -1,0 +1,96 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}courses{% endblock  %}
+
+{% block courseactive %}active{% endblock %}
+
+
+{% block content %}
+<section id="sponsors" class="section-padding">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Our Free Courses</h1>
+                    <p class="wow fadeInDown" data-wow-delay="0.2s"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-30 text-center wow fadeInDown justify-content-center" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-4 align-self-center">
+               <div class="card-ace">
+                
+                    <img src="{%static 'images\courses\c5.png'%}" class="card-img-top" alt="...">
+               
+                <div class="sponsor-content">
+                    <h4 class="card-title">Digital Marketing</h4> 
+                </div>
+            </div>
+           </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-4 align-self-center">
+                <div class="card">
+                    
+                        <img src="{%static 'images\courses\c6.png'%}" class="card-img-top" alt="...">
+                    
+                    <div class="sponsor-content">
+                        <h4 class="card-title">Web Development</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-2 align-self-center">
+                <div class="card">
+                   
+                        <img src="{%static 'images\courses\c7.png'%}" class="card-img-top" alt="...">
+                    
+                    <div class="sponsor-content">
+                        <h4 class="card-title">Web Designing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-auto align-self-center">
+                <div class="card">
+                    
+                        <img src="{%static 'images\courses\c8.png'%}" class="card-img-top" alt="...">
+                    
+                    <div class="sponsor-content">
+                        <h4 class="card-title">Android Development</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-4 align-self-center">
+                <div class="card">
+                        <img src="{%static 'images\courses\c3.png'%}" class="card-img-top" alt="...">
+                    
+                    <div class="sponsor-content">
+                        <h4 class="card-title">Machine Learning</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto my-2 align-self-center">
+                <div class="card">
+                        <img src="{%static 'images\courses\c9.png'%}" class="card-img-top" alt="...">
+                    
+                    <div class="sponsor-content">
+                        <h4 class="card-title">Artificial Intelligence</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+    </section>
+        <!-- Sponsors Section End -->
+
+        {% endblock  %}
+
+        {% block footer %}foo{% endblock  %}
+     
+     
+        {% block script %}
+        
+        {% endblock  %}
