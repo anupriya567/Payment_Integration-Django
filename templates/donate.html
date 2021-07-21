@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container my-4 justify-content-center">
+<form method="post">
+{% csrf_token %}
+
+<div class="row" >
+    <div class="col-md-6">
+       <br>
+        <div class="donat-form">
+             <div class="form-titl">
+                 <b>Enter the amount for Donation</b>
+             </div>
+             <div class="form-dong">
+                 <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+
+                      </div>
+                      <input type="text" name="amount" class="form-control" placeholder="Enter Amount">
+                      <div class="input-group-append">
+
+                      </div>
+                 </div>
+                 <div class="input-group mb-3">
+                      <input type="text" name ="name" class="form-control" placeholder="Enter Full Name">
+                 </div>
+                 <div class="input-group mb-3">
+                      <input type="text" name="email" class="form-control" placeholder="Enter Email Address">
+                 </div>
+                 <div class=" no-margin ">
+                    <button class="btn btn-success">Donate Now</button>
+                 </div>
+
+             </div>
+
+        </div>
+
+    </form>
+</div>
+
+{% if payment %}
+
+<div class="text-center mx-auto">
+<form action="/success/" method="POST">
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key= "{{api_key}}"
+    data-amount="{{payment.amount}}" 
+    data-currency="INR"
+    data-order_id="{{payment.id}}"
+    data-buttontext="Pay with Razorpay"
+    data-name="Donate Spark"
+    data-description="Test Transaction"
+    data-image="{% static 'images/credit-card.png' %}"
+    data-prefill.name="{{payment.name}}"
+    data-prefill.email="{{payment.email}}"
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
+
+
+{% endif %}
+
+</div>
+{% endblock %}
+
+{% block footer %}foo{% endblock  %}
