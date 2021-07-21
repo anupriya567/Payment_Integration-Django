@@ -147,13 +147,13 @@ django_heroku.settings(locals())
 
 
 # Rozarpay Keys
-ROZARPAY_API_KEY = os.environ['RAZOR_API_KEY']
-ROZARPAY_SECRET_KEY = os.environ['RAZOR_SECRET_KEY']
+ROZARPAY_API_KEY = env('RAZOR_API_KEY')
+ROZARPAY_SECRET_KEY = env('RAZOR_SECRET_KEY')
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ['EMAIL']
-EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
+EMAIL_HOST_USER = env('EMAIL')
+EMAIL_HOST_PASSWORD = env('PASSWORD')
